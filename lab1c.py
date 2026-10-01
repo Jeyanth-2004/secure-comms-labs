@@ -18,7 +18,7 @@ ciphertexts = [
     "0f351c71c7654ff251de056ea68920cf2d7d49e53ff9174bd303fc04d74e7e69ad9cb9bf56160c2aea960d002b139b6b8f25982fe2e6e9f158a2451944c3f623d19dc425648beceb621f38768abb4f47ad46176b7b04b3c069a0c4da3b0dd3bea96a54b7e4453989f86b55ba8b635b90f944"
 ]
 cts = [bytes.fromhex(c) for c in ciphertexts]
-target = cts[12]   # message 13 is the one we need to decode
+target = cts[12]   
 
 
 key = [None] * len(target)
