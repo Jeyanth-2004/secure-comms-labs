@@ -1,6 +1,4 @@
-# Lab 1C - Many Time Pad
-# 13 ciphertexts encrypted with the SAME stream cipher key.
-# If C1 = P1 xor K and C2 = P2 xor K, then C1 xor C2 = P1 xor P2 (the key cancels out).
+
 
 ciphertexts = [
     "0f381a39fe6f41bd57c44646eacc3ecb2b695ae729ee174ac650ab0c92547a73b19ca7a24d40162bea9c0d1c2c1395678f6dec2ae8b4eaa449b1511507c3e06dd6c9c02c69c5eca4241d3f3585f44440ad011078381bacc075e4c3",
