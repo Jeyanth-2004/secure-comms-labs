@@ -20,10 +20,7 @@ ciphertexts = [
 cts = [bytes.fromhex(c) for c in ciphertexts]
 target = cts[12]   # message 13 is the one we need to decode
 
-# ---- Step 1: space trick ----
-# a space (0x20) xor a letter gives the same letter with its case flipped,
-# so if C_i xor C_j is a letter in lots of pairs at one position,
-# message i probably has a space there -> key byte = C_i xor 0x20
+
 key = [None] * len(target)
 for i, ci in enumerate(cts):
     for p in range(min(len(ci), len(target))):
@@ -39,7 +36,6 @@ print("Step 1 - partial decryption of message 13 (space trick):")
 print(decrypt(target, key))
 print()
 
-# ---- Step 2: crib - fill in the gaps by guessing the obvious words ----
 guess = "The Web as I envisaged it we have not seen it yet The future is still so much bigger than the past Tim Berners-Lee"
 key = [target[p] ^ ord(guess[p]) for p in range(len(target))]
 
